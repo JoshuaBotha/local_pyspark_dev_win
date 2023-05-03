@@ -10,6 +10,8 @@ IF EXIST "venv\" (
     "python" "-m" "venv" "venv"
     ECHO Update pip
     "venv\Scripts\python.exe" "-m" "pip" "install" "--upgrade" "pip"
+    ECHO Installing Python wheel module
+    "venv\Scripts\pip3.exe" "install" "wheel"
     ECHO Installing Python modules
     "venv\Scripts\pip3.exe" "install" "-r" "Setup\requirements.txt"
     ECHO Virtual environment created!!! (If no errors occured =)
